@@ -1,7 +1,11 @@
-function makeTransaction(quantity, pricePerDroid) {
-  return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+function getElementWidth(content, padding, border) {
+  const contentWidth = parseFloat(content);
+  const paddingWidth = parseFloat(padding);
+  const borderWidth = parseFloat(border);
+
+  return contentWidth + paddingWidth * 2 + borderWidth * 2;
 }
 
-console.log(makeTransaction(5, 3000));
-console.log(makeTransaction(3, 1000));
-console.log(makeTransaction(10, 500));
+console.log(getElementWidth('50px', '8px', '4px'));
+console.log(getElementWidth('60px', '12px', '8.5px'));
+console.log(getElementWidth('200px', '0px', '0px'));
